@@ -37,6 +37,9 @@
                     <!-- 회원가입/로그인 링크 -->
                     <ul class="navbar-nav">
                         <!-- 로그인전 -->
+                        <%
+                        if(session.getAttribute("id") == null) {
+                        %>
                         <li class="nav-item">
                             <a class="nav-link" href="#">
                                 <i class="bi-person-plus-fill" style="font-size: 1rem;"></i>
@@ -49,19 +52,28 @@
                                 로그인
                             </a>
                         </li>
+                        <%
+                        }
+                        %>
                         <!-- 로그인후 -->
-                        <!-- <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <i class="bi-person-lines-fill" style="font-size: 1rem;"></i>
-                                회원정보수정
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <i class="bi-box-arrow-right" style="font-size: 1rem;"></i>
-                                로그아웃
-                            </a>
-                        </li> -->
+                        <%
+                        if(session.getAttribute("id") != null) {	
+                        %>
+	                        <li class="nav-item">
+	                            <a class="nav-link" href="#">
+	                                <i class="bi-person-lines-fill" style="font-size: 1rem;"></i>
+	                                회원정보수정
+	                            </a>
+	                        </li>
+	                        <li class="nav-item">
+	                            <a class="nav-link" href="../member/Logout.jsp">
+	                                <i class="bi-box-arrow-right" style="font-size: 1rem;"></i>
+	                                로그아웃
+	                            </a>
+	                        </li>
+                        <%
+                        }
+                        %>	
                     </ul>
                 </div>
             </nav>

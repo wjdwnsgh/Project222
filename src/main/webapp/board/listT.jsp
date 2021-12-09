@@ -1,6 +1,12 @@
+<%@page import="board.Dao"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ include file="./commons/header.jsp" %>
+<%
+	Dao dao = new Dao(application);
+
+	int totalPage = dao.select(param);
+%>
 <body>
 <div class="container">
     <!-- Top영역 -->
