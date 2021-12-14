@@ -59,6 +59,11 @@
                         <%
                         if(session.getAttribute("id") != null) {	
                         %>
+                        	<li class="nav-item">
+                        		<a class="nav-link" href="#">
+                        			<%= session.getAttribute("name") %> 님
+                        		</a>
+                        	</li>
 	                        <li class="nav-item">
 	                            <a class="nav-link" href="#">
 	                                <i class="bi-person-lines-fill" style="font-size: 1rem;"></i>

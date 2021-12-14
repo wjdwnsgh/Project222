@@ -88,8 +88,10 @@ if(session.getAttribute("id") == null) {
 <%
 		} else {
 	%>
+		<fieldset>
 			<%= session.getAttribute("name") %> 회원님, 로그인하셨습니다. <br>
-			<a href="../board/listT.jsp">메인</a>
+			<a href="../board/listT.jsp">메인</a>		
+		</fieldset>
 	<%
 		}
 	%>
